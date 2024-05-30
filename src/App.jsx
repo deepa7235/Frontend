@@ -1,22 +1,19 @@
-import Calculator from "./calculator_app/Calculator.jsx";
-import Dog from "./components1/Dog.jsx";
+import React from "react";
+import Home from "../screens/Home";
+import Products from "../screens/Products";
+import { Route, Routes } from "react-router-dom";
+import Signup from "./components/Signup";
+import Contact from "../screens/Contact";
 
-function Heading() {
-  return <h1>This is an h1 heading.</h1>;
-}
-
-function App() {
+export default function App() {
   return (
     <>
-      {/* <div className="App">  */}
-      {/* This is the starting code for "Your first component" ungraded lab 
-      <Heading /> */}
-      {/* <Dog /> */}
-      <Calculator/>
-
-      {/* </div>  */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/signup" element={<Signup/>} />
+        <Route path="/contact" element={<Contact/>} />
+      </Routes>
     </>
   );
 }
-
-export default App;

@@ -1,0 +1,82 @@
+[
+    {
+        "id":1,
+        "name":"Natraj",
+        "title":"Pencils made of graphite in a metal case -5",
+        "price":"90",
+        "category": "Pencil",
+        "image":"https://img.freepik.com/free-psd/pencils-made-graphite-metal-case-isolated-transparent-background_191095-21238.jpg?t=st=1716961254~exp=1716964854~hmac=783b38e54feab1d4c3c8d21e380a84edbb92de972b293ffd3aed89f1875987a1&w=740"
+    },
+    {
+        "id":2,
+        "name":"Bag",
+        "title":"Pencils made of graphite in a metal case -5",
+        "price":"900",
+        "category": "Bag",
+        "image":"https://img.freepik.com/free-psd/pencils-made-graphite-metal-case-isolated-transparent-background_191095-21238.jpg?t=st=1716961254~exp=1716964854~hmac=783b38e54feab1d4c3c8d21e380a84edbb92de972b293ffd3aed89f1875987a1&w=740"
+    },
+    {
+        "id":3,
+        "name":"Geometry Box",
+        "title":"Pencils made of graphite in a metal case -5",
+        "price":"100",
+        "category": "Geometry",
+        "image":"https://img.freepik.com/free-psd/pencils-made-graphite-metal-case-isolated-transparent-background_191095-21238.jpg?t=st=1716961254~exp=1716964854~hmac=783b38e54feab1d4c3c8d21e380a84edbb92de972b293ffd3aed89f1875987a1&w=740"
+    },
+    {
+        "id":4,
+        "name":"Colours",
+        "title":"Pencils made of graphite in a metal case -5",
+        "price":"50",
+        "category": "Colour pencils",
+        "image":"https://img.freepik.com/free-psd/pencils-made-graphite-metal-case-isolated-transparent-background_191095-21238.jpg?t=st=1716961254~exp=1716964854~hmac=783b38e54feab1d4c3c8d21e380a84edbb92de972b293ffd3aed89f1875987a1&w=740"
+    },
+    {
+        "id":5,
+        "name":"Scissors",
+        "title":"Sharp blade",
+        "price":"60",
+        "category": "Scissors",
+        "image":"https://img.freepik.com/free-psd/pencils-made-graphite-metal-case-isolated-transparent-background_191095-21238.jpg?t=st=1716961254~exp=1716964854~hmac=783b38e54feab1d4c3c8d21e380a84edbb92de972b293ffd3aed89f1875987a1&w=740"
+    },
+    {
+        "id":6,
+        "name":"GorkhaPatra",
+        "title":"Nepali Newapaper",
+        "price":"10",
+        "category": "Newspaper",
+        "image":"https://img.freepik.com/free-psd/pencils-made-graphite-metal-case-isolated-transparent-background_191095-21238.jpg?t=st=1716961254~exp=1716964854~hmac=783b38e54feab1d4c3c8d21e380a84edbb92de972b293ffd3aed89f1875987a1&w=740"
+    },
+    {
+        "id":7,
+        "name":"Shristi Dainik",
+        "title":"Nepali Newapaper",
+        "price":"10",
+        "category": "Newspaper",
+        "image":"https://img.freepik.com/free-vector/newspaper-concept-illustration_114360-22666.jpg?t=st=1716967469~exp=1716971069~hmac=310588e63bdfb268d06e55d5e09b5794c3834da6749a94de3aff65324d565623&w=740"
+    },
+    {
+        "id":8,
+        "name":"Nagarik",
+        "title":"Nepali Newapaper",
+        "price":"10",
+        "category": "Newspaper",
+        "image":"https://img.freepik.com/free-vector/newspaper-concept-illustration_114360-22666.jpg?t=st=1716967469~exp=1716971069~hmac=310588e63bdfb268d06e55d5e09b5794c3834da6749a94de3aff65324d565623&w=740"
+    },
+    {
+        "id":9,
+        "name":"Kantipur",
+        "title":"Nepali Newapaper",
+        "price":"10",
+        "category": "Newspaper",
+        "image":"https://img.freepik.com/free-vector/newspaper-concept-illustration_114360-22666.jpg?t=st=1716967469~exp=1716971069~hmac=310588e63bdfb268d06e55d5e09b5794c3834da6749a94de3aff65324d565623&w=740"
+    },
+    {
+        "id":10,
+        "name":"Kathmandu",
+        "title":"Nepali Newapaper",
+        "price":"10",
+        "category": "Newspaper",
+        "image":"https://img.freepik.com/free-vector/newspaper-concept-illustration_114360-22666.jpg?t=st=1716967469~exp=1716971069~hmac=310588e63bdfb268d06e55d5e09b5794c3834da6749a94de3aff65324d565623&w=740"
+    }
+]
