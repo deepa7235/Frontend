@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 export default function Login({ show, handleClose }) {
   //  = ({ show, handleClose }) =>
@@ -14,7 +16,37 @@ export default function Login({ show, handleClose }) {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = async (data) => {
+    const userInfo = {
+      email: data.email,
+      password: data.password,
+    };
+    console.log(data);
+    await axios
+      .post("http://localhost:4001/user/login", userInfo)
+      .then((res) => {
+        //then means promise type either it resolve or rejects
+        console.log(res.data);
+        if (res.data) {
+          toast.success("Logged in Successfully!");
+          {
+            handleClose;
+          }
+          setTimeout(() => {
+            window.location.reload();
+            localStorage.setItem("Users", JSON.stringify(res.data.user));
+          }, 1000);
+        }
+      })
+      .catch((err) => {
+        if (err.response) {
+          console.log(err);
+          // alert("Error:" + err.response.data.message);
+          toast.error("Error:" + err.response.data.message);
+          setTimeout(() => {}, 2000);
+        }
+      });
+  };
 
   return (
     <div className={showHideClassName}>
@@ -36,8 +68,13 @@ export default function Login({ show, handleClose }) {
               className="w-full px-4 py-2 border rounded-lg"
               placeholder="Enter your email"
               {...register("email", { required: true })}
-            /><br/>
-             {errors.email && <span className="text-sm text-red-500">This field is required</span>}
+            />
+            <br />
+            {errors.email && (
+              <span className="text-sm text-red-500">
+                This field is required
+              </span>
+            )}
           </div>
           <div className="mb-4">
             <label className="block mb-2">Password:</label>
@@ -46,8 +83,13 @@ export default function Login({ show, handleClose }) {
               className="w-full px-4 py-2 border rounded-lg"
               placeholder="Enter your password"
               {...register("password", { required: true })}
-            /><br/>
-             {errors.password && <span className="text-sm text-red-500">This field is required</span>}
+            />
+            <br />
+            {errors.password && (
+              <span className="text-sm text-red-500">
+                This field is required
+              </span>
+            )}
           </div>
           {/* button */}
           <button

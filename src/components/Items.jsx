@@ -1,9 +1,22 @@
-import React from "react";
-import list from "../../public/jsonFile/list.json";
-import Cards from "./Cards.jsx"
+import React, { useEffect, useState } from "react";
+import Cards from "./Cards.jsx";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function Items() {
+  const [item, setItem] = useState([]);
+  useEffect(() => {
+    const getItem = async () => {
+      try {
+        const res = await axios.get("http://localhost:4001/item");
+        console.log(res.data);
+        setItem(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getItem();
+  }, []);
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
@@ -19,13 +32,13 @@ export default function Items() {
             quod rerum libero corrupti!
           </p>
           <Link to="/">
-          <button className="bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-blue-900 mt-6">
-            Back
-          </button>
+            <button className="bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-blue-900 mt-6">
+              Back
+            </button>
           </Link>
         </div>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-4">
-          {list.map((item) => (
+          {item.map((item) => (
             <Cards key={item.id} item={item} />
           ))}
         </div>

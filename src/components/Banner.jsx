@@ -31,7 +31,7 @@ export default function Banner() {
               <input type="text" className="grow" placeholder="Email" />
             </label>
           </div>
-            <button className="btn btn-secondary mt-6">Secondary</button>
+            <button className="btn btn-secondary mt-6">Get Started</button>
         </div>
         <div className="md:w-1/2 w-full order-1 mt-20">
           <img src={banner} className="w-81 h-81"/>

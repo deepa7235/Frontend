@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Login from "./Login";
+import { useAuth } from "../context/AuthProvider";
+import Logout from "./Logout";
 
 export default function Navbar() {
+  const [authUser, setAuthUser] = useAuth();
+
   const [show, setShow] = useState(false);
 
   const showModal = () => {
@@ -111,15 +115,19 @@ export default function Navbar() {
               </label>
             </div>
 
-            <div className="">
-              <button
-                className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
-                onClick={showModal}
-              >
-                Login
-              </button>
-              <Login show={show} handleClose={hideModal} />
-            </div>
+            {authUser ? (
+              <Logout />
+            ) : (
+              <div className="">
+                <button
+                  className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
+                  onClick={showModal}
+                >
+                  Login
+                </button>
+                <Login show={show} handleClose={hideModal} />
+              </div>
+            )}
           </div>
         </div>
       </div>
